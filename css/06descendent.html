@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<head>
+    <style>
+        /* 자식 셀렉터 */
+        div>img {
+            width: 500px;
+            height: auto;
+        }
+
+        a>img {
+            width: 250px;
+            height: auto;
+        }
+
+        /* 자손 셀렉터 띄어쓰기로 구분합니다.*/
+        div img {
+            border: 5px solid blue;
+        }
+
+        div span {
+            color: gold;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div>
+        <img src="../html/01.png" alt="">
+        <a href="">
+            <img src="../html/01.png" alt="">
+        </a>
+    </div>
+
+    <!-- 아래 div 에 있는 span 요소들의 color : gold -->
+    <div>
+        <span>Lorem, ipsum dolor.</span>
+        <h1>Lorem, ipsum.</h1><span>lorem1</span></h1>
+    </div>
+</body>
+
+</html>

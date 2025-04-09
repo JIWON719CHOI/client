@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<head>
+    <style>
+        /* 클래스로 마킹된 span에 적용하는 것.  */
+        .a {
+            color: blue;
+        }
+
+        .b {
+            color: pink;
+        }
+
+        .c {
+            color: green;
+        }
+
+        .d {
+            color: red;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- div>span>lorem3^h1>lorem2+span>lorem1 -->
+    <!-- span에다가 clss로 마킹해주면 위에 스타일에서 묶어서 적용할 수 있음 -->
+    <div>
+        <span class="a">Lorem, ipsum dolor.</span>
+        <h1 class="a">Lorem, ipsum.<span class="a">Lorem.</span></h1>
+    </div>
+
+    <!-- h*5>lorem4 -->
+
+    <h5>Lorem, ipsum dolor.</h5>
+    <h5 class="b">Facilis, aliquam hic!</h5>
+    <h5>Odit, placeat delectus.</h5>
+    <h5 class="b">Praesentium, amet quaerat.</h5>
+
+    <!-- p*4>lorem -->
+    <p class="c">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore corrupti beatae sunt voluptas maiores
+        a dolores
+        voluptatem, non amet saepe in autem, aut excepturi quisquam eius fugiat? Facere, dignissimos tempora!</p>
+    <p class="d">Minima illum exercitationem quaerat omnis nobis molestias molestiae adipisci nisi maiores quisquam.
+        Neque nam
+        laboriosam deserunt tempore veritatis aut deleniti eaque sint, ducimus, repudiandae nesciunt totam cupiditate
+        qui molestias ex!</p>
+    <p class="c">Quis, consequatur voluptatum eum aliquid error ratione ut laboriosam nesciunt asperiores ad quidem,
+        corporis
+        dignissimos eos fugiat cumque assumenda mollitia minus earum. Expedita labore vitae natus. Ad ipsum quasi in!
+    </p>
+    <p class="d">Soluta recusandae tempora ducimus odit, ex fuga pariatur facere iure dolores ipsam hic quis modi
+        eligendi sit
+        nemo impedit velit deleniti nam sapiente. Odio incidunt voluptas sunt eveniet facere. In.</p>
+</body>
+
+</html>
