@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<!-- html>head+body -->
+
+<head>
+    <style>
+        /* 형제 selector () */
+        /* h2 다음에 오는 p 에 적용함 */
+        h2+p {
+            background-color: skyblue;
+        }
+
+        h1+p {
+            background-color: pink;
+        }
+
+        /* div에는 자식으로 인정해서 > 이걸 써야 함 */
+        div>p {
+            background-color: greenyellow;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- (h1>lorem1^p>lorem)+(h2>lorem1^p>lorem) -->
+    <h1>Lorem.</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut et repellendus aliquam quaerat, sapiente est atque
+        reiciendis architecto, quasi amet dolores laboriosam, sunt illo odio? A iure perspiciatis maxime commodi.</p>
+    <h2>Lorem.</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime eligendi exercitationem deserunt fuga modi
+        perspiciatis labore. Explicabo est natus nisi sapiente harum dolores. Saepe ipsam labore dolore quas neque eius.
+    </p>
+    <div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla explicabo ipsum nihil eaque at quae ab ea,
+            blanditiis dolores consequuntur, nesciunt esse expedita hic asperiores id laudantium amet deleniti! Error?
+        </p>
+    </div>
+
+    <!-- table>thead+tbody   이런 구조.  -->
+    <table>
+        <thead></thead>
+        <tbody></tbody>
+    </table>
+</body>
+
+</html>

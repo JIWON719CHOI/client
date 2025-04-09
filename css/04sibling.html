@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<!-- html>head+body 이런 식으로... -->
+<html>
+
+<head>
+    <style>
+        p {
+            color: navy;
+        }
+
+        /* 인접한 형제 셀렉터 */
+        h1+p {
+            background-color: skyblue;
+        }
+
+        /* 형제 셀렉터 */
+        h1~p{
+            border: 1px solid black;
+        }
+        div > p{
+            border: dotted 5px yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- h1>lorem1^p*5>lorem3 -->
+    <h1>Lorem.</h1>
+    <p>Lorem, ipsum dolor.</p>
+    <p>Corporis, ea repudiandae!</p>
+    <p>Corrupti, id dolorum?</p>
+    <p>Blanditiis, delectus amet!</p>
+    <p>Aperiam, saepe amet.</p>
+
+    <!-- div>p*2>lorem3 -->
+    <div>
+        <p>Lorem, ipsum dolor.</p>
+        <p>Officiis, temporibus repellendus!</p>
+    </div>
+
+    <!-- p*2>lorem3 -->
+    <p>Lorem, ipsum dolor.</p>
+    <p>Ex, consequuntur facilis?</p>
+</body>
+
+</html>
