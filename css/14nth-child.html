@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        h1:nth-child(2) {
+            color: yellow;
+        }
+
+        /* odd는 홀수 */
+        h1:nth-child(odd) {
+            background-color: skyblue;
+        }
+
+        /* even 짝수 */
+        h1:nth-child(even) {
+            border: 5px solid red;
+        }
+
+        table {
+            width: 500px;
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 1px solid black0;
+        }
+
+        th {
+            background-color: black;
+            color: white;
+        }
+
+        /* tr:nth-child(even){
+            background-color: grey;
+        } */
+        table.striped tr:nth-child(even) {
+            background-color: grey;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- h1*3>lorem1^div>h1*3>lorem1 -->
+    <h1>Lorem.</h1>
+    <h1>Aspernatur!</h1>
+    <h1>Est.</h1>
+    <div>
+        <h1>Lorem.</h1>
+        <h1>Officiis.</h1>
+        <h1>Ex!</h1>
+    </div>
+    <!-- h1은 누군가의 5번째 자식이라서 odd  -->
+    <h1>text</h1>
+
+    <hr>
+
+    <!-- table>thead>tr>th*4>lorem1^^^tbody>tr*5>td*4>lorem1 -->
+    <table class="striped">
+        <thead>
+            <tr>
+                <th>Lorem.</th>
+                <th>Aut.</th>
+                <th>Amet?</th>
+                <th>Temporibus.</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Lorem.</td>
+                <td>Et?</td>
+                <td>Ut.</td>
+                <td>Voluptatem!</td>
+            </tr>
+            <tr>
+                <td>Lorem.</td>
+                <td>Minus.</td>
+                <td>Modi.</td>
+                <td>Ad?</td>
+            </tr>
+            <tr>
+                <td>Lorem.</td>
+                <td>Vero.</td>
+                <td>Ea.</td>
+                <td>Iusto.</td>
+            </tr>
+            <tr>
+                <td>Lorem.</td>
+                <td>Cumque.</td>
+                <td>Distinctio.</td>
+                <td>Corporis?</td>
+            </tr>
+            <tr>
+                <td>Lorem.</td>
+                <td>Quis.</td>
+                <td>Voluptate.</td>
+                <td>Maiores?</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>

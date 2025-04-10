@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!-- html>head>style^body -->
+<html>
+
+<head>
+    <style>
+        /* 지금 h1에 클래스가 설정되어 있지 않지만 있는 것 처럼 하는 것 pseudo 클래스.
+            nth-child란 특정 순서의 자식식 body의 자식과 div의 자식을 모두 확인함 누군가의..자식.. */
+        h1:nth-child(odd) {
+            background-color: skyblue;
+        }
+
+        h1:nth-child(1) {
+            border: 5px solid navy;
+        }
+
+        h1:nth-child(2) {
+            border: dotted 5px pink;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Lorem.</h1>
+    <h1>Non.</h1>
+    <h1>At?</h1>
+    <h1>Possimus?</h1>
+    <h1>Nesciunt.</h1>
+    <h1>Inventore.</h1>
+    <h1>Ipsa?</h1>
+    <h1>Corrupti.</h1>
+    <h1>Atque.</h1>
+    <h1>Autem.</h1>
+    <h1>Delectus?</h1>
+    <h1>Tempora!</h1>
+    <h1>Accusamus.</h1>
+    <h1>Ducimus.</h1>
+    <h1>A?</h1>
+    <h1>Est!</h1>
+    <h1>Minus.</h1>
+    <h1>Adipisci?</h1>
+    <h1>Numquam!</h1>
+    <h1>Ullam!</h1>
+
+
+    <hr>
+
+    <!-- div>h1*5>lorem1 -->
+    <div>
+        <h1>Lorem.</h1>
+        <h1>Et.</h1>
+        <h1>Tempora.</h1>
+        <h1>Iusto.</h1>
+        <h1>Nesciunt.</h1>
+    </div>
+</body>
+
+</html>

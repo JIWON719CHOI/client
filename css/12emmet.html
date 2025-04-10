@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head></head>
+
+<body>
+    <h1></h1>
+    <p></p>
+    <p></p>
+    <p></p>
+    <h3></h3>
+    <h3></h3>
+    <h3></h3>
+    <h3></h3>
+    <h3></h3>
+    <p></p>
+    <h3><img src="" alt=""></h3>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <h3><a href=""></a><img src="" alt=""></h3>
+    <h3 class="header"></h3>
+    <p class="note"></p>
+    <p class="note"></p>
+    <p class="note"></p>
+    <!-- id selector # -->
+    <!-- h3#head1 -->
+    <he id="head1"></he>
+
+    <!-- 잘못된 예: p#note11*3 은 같은 id 3개가 생성되서 앙대용 id는 항상 주민번호 처럼 독자적으로.. -->
+
+    <!-- p#note$*3 -->
+    <p id="note1"></p>*3
+
+    <!-- div -->
+    <h3 class="header"></h3>
+    <!-- .header   점 앞에 아무것도 없으면 div가 생성됨 -->
+    <div class="header"></div>
+
+    <!-- div#spe1.note.error  에서 div는 생략 가능-->
+    <div id="spe1" class="note error"></div>
+
+    <!-- table>thead+tbody -->
+    <table>
+        <thead></thead>
+        <tbody></tbody>
+    </table>
+    <!-- table>thead>tr^tbody>td   여기서 ^ 이건 다시 한칸 위로 올라오라는 뜻 (caret)..속칭 삿갓.. 두번쓰면 두번 올라감-->
+    <table>
+        <thead>
+            <tr></tr>
+        </thead>
+        <tbody>
+            <td></td>
+        </tbody>
+    </table>
+
+    <!-- talbe>thead>tr>th*3>lorem1^^^tbody -->
+    <talbe>
+        <thead>
+            <tr>
+                <th>Lorem.</th>
+                <th>Temporibus!</th>
+                <th>A.</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </talbe>
+
+    <hr>
+
+    <!-- table>thead>tr>th*3>lorem1^^^tbody>tr*4>td*3>lorem1 -->
+    <table>
+        <thead>
+            <tr>
+                <th>Lorem.</th>
+                <th>Eius.</th>
+                <th>Error.</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Lorem.</td>
+                <td>Quia!</td>
+                <td>Harum.</td>
+            </tr>
+            <tr>
+                <td>Lorem.</td>
+                <td>Error.</td>
+                <td>Omnis!</td>
+            </tr>
+            <tr>
+                <td>Lorem.</td>
+                <td>Quia.</td>
+                <td>Corrupti.</td>
+            </tr>
+            <tr>
+                <td>Lorem.</td>
+                <td>Nesciunt.</td>
+                <td>Nihil.</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <hr>
+
+    <!-- table#table1.striped>thead>tr>th.table-header>lorem1^^^tbody>tr*3>td.table-cell*4>lorem1
+        종종 사용하게 됨-->
+    <table id="table1" class="striped">
+        <thead>
+            <tr>
+                <th class="table-header">Lorem.</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="table-cell">Lorem.</td>
+                <td class="table-cell">Facere.</td>
+                <td class="table-cell">At?</td>
+                <td class="table-cell">Quam.</td>
+            </tr>
+            <tr>
+                <td class="table-cell">Lorem.</td>
+                <td class="table-cell">Itaque.</td>
+                <td class="table-cell">Nam?</td>
+                <td class="table-cell">Temporibus.</td>
+            </tr>
+            <tr>
+                <td class="table-cell">Lorem.</td>
+                <td class="table-cell">Molestias.</td>
+                <td class="table-cell">Pariatur?</td>
+                <td class="table-cell">Vero!</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<head>
+    <style>
+        h1{
+            background-color: skyblue;
+        }
+        head{
+            background-color: beige;
+        }
+
+        /* 선택을 중복으로 받은 요소는 가장 긴 선택을 받은 것에 영향을 받음. */
+        .head.note{
+            background-color: yellow;
+        }
+        /* id 선택자가 가장 쎈 녀석 */
+        #head1{
+            background-color: navy;
+        }
+        .head.note.hover{
+            background-color: orange;
+        }
+        #header1.head{
+            background-color: gold;
+        }
+        /* 같은 점수면 아래에 있는 것 사용함 */
+        .head{
+            background-color: brown;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="head">Lorem.</h1>
+    <h1 class="head note">Pariatur.</h1>
+    <h1 id="header1" class="head note">Eveniet!</h1>
+    <h1>Fuga!</h1>
+    <h1>Aperiam.</h1>
+    <h1>Natus!</h1>
+    <h1>Reprehenderit?</h1>
+    <h1>Reiciendis?</h1>
+    <h1>Dolore!</h1>
+    <h1>Obcaecati!</h1>
+</body>
+</html>
