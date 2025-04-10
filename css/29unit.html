@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box1{
+            background-color: blue;
+            height: 100px;
+        }
+        #box2{
+            background-color: yellow;
+            /* 부모 높이에 50% 꼭 부모 높이가 존재해야 한다. */
+            height: 50%;
+        }
+        #box3{
+            background-color: aqua;
+            height: 10vh;
+        }
+    </style>
+</head>
+<body>
+    <!-- #box$*2{박스} -->
+
+    <div style="height: 500px; background-color: gray;">
+        <div id="box1">박스1</div>
+        <div id="box2">박스2</div>
+        <div id="box3">박스3</div>
+    </div>
+
+</body>
+</html>
