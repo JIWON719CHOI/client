@@ -2,14 +2,34 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <style>
+        /* 기본 배경 */
+        html {
+            background-color: white; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        /* 메뉴 관련 */
+        .menu-container {
+            display: flex;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-weight: 900;
+            font-size: 30px;
+        }
+
         .nemo-button {
             padding: 17px;
+            cursor: pointer;
         }
 
         .nemo-button:hover {
@@ -17,17 +37,14 @@
             color: white;
         }
 
-        .logo {
-            font-weight: 900;
-            font-size: 30px;
-        }
-
+        /* 버튼 스타일 (공통) */
         .cart-button,
         .circle-button {
             padding: 10px;
             border-radius: 50px;
             display: flex;
             align-items: center;
+            cursor: pointer;
         }
 
         .cart-button {
@@ -47,15 +64,7 @@
             background-color: rgb(1, 78, 1);
         }
 
-        .menu-container {
-            display: flex;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-        }
-
+        /* 두번째 상단바 */
         .second-top-bar {
             display: flex;
             background-color: black;
@@ -65,22 +74,26 @@
             background-color: black;
             color: white;
             padding: 16px;
+            cursor: pointer;
         }
 
         .second-menu-item:hover {
             background-color: green;
         }
 
+        /* 상단 배너 */
         .top-banner {
             height: 150px;
             background-color: skyblue;
         }
 
+        /* 네비 버튼 */
         .navi-button {
             color: white;
             background-color: goldenrod;
             padding: 16px 20px;
             border-radius: 5px;
+            cursor: pointer;
         }
 
         .navi-button-container {
@@ -88,17 +101,14 @@
             justify-content: space-between;
         }
 
+        /* 점보트론 */
         .jumbotron {
             background-color: #d9eee1;
             padding: 24px;
             margin-top: 24px;
         }
 
-        .main-content {
-            margin: 24px;
-            flex: 1;
-        }
-
+        /* 메인 컨텐츠 레이아웃 */
         .main-content-container {
             display: flex;
             height: 100vh;
@@ -114,6 +124,12 @@
             background-color: greenyellow;
         }
 
+        .main-content {
+            margin: 24px;
+            flex: 1;
+        }
+
+        /* 사이드 메뉴 */
         .side-menu-header {
             font-size: 20px;
             padding-left: 16px;
@@ -121,6 +137,7 @@
 
         .side-menu-item {
             padding-left: 26px;
+            cursor: pointer;
         }
 
         .side-menu-item:hover {
@@ -131,52 +148,33 @@
 
 <body>
     <div class="menu-container">
-
-        <div class="logo">
-            <span>
-                W
-            </span>
+        <div class="logo"><span>W</span></div>
+        <div class="nemo-button">
+            Tutorials <i class="fa-solid fa-caret-down"></i>
         </div>
         <div class="nemo-button">
-            Tutorials
-            <i class="fa-solid fa-caret-down"></i>
+            Exercises <i class="fa-solid fa-caret-down"></i>
         </div>
         <div class="nemo-button">
-            Exercises
-            <i class="fa-solid fa-caret-down"></i>
+            Certificates <i class="fa-solid fa-caret-down"></i>
         </div>
         <div class="nemo-button">
-            Certificates
-            <i class="fa-solid fa-caret-down"></i>
+            Services <i class="fa-solid fa-caret-down"></i>
         </div>
-        <div class="nemo-button">
-            Services
-            <i class="fa-solid fa-caret-down"></i>
-        </div>
-
         <div class="cart-button">
             <span>
-                <span style="color: blue;">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                </span>
+                <span style="color: blue;"><i class="fa-solid fa-cart-shopping"></i></span>
                 Get Certified
             </span>
         </div>
-
         <div class="circle-button">
-            <span>
-                Sign Up
-            </span>
+            <span>Sign Up</span>
         </div>
         <div class="circle-button">
-            <span>
-                Log in
-            </span>
+            <span>Log in</span>
         </div>
     </div>
 
-    <!-- 두번째 상단바 -->
-    <!-- div.second-top-bar>.second-menu-item*8>lorem1 -->
     <div class="second-top-bar">
         <div class="second-menu-item">Lorem.</div>
         <div class="second-menu-item">Eaque?</div>
@@ -188,14 +186,10 @@
         <div class="second-menu-item">Debitis.</div>
     </div>
 
-    <!-- .main-content-container>.side-menu+.main-content+.ad-container -->
-
     <div class="main-content-container">
         <div class="side-menu">
-            <h1 class="side-menu-header">
-                HTML Tutorial
-            </h1>
-            <!-- .side-menu-item*30>lorem1 -->
+            <h1 class="side-menu-header">HTML Tutorial</h1>
+            <!-- 사이드 메뉴 항목들이 많은 경우 (반복되는 부분은 실제 개발 시 템플릿이나 백엔드로 처리) -->
             <div class="side-menu-item">Lorem.</div>
             <div class="side-menu-item">Totam!</div>
             <div class="side-menu-item">Ipsa?</div>
@@ -229,28 +223,20 @@
         </div>
 
         <div class="main-content">
-            <!-- 상단 배너 -->
-            <div class="top-banner">
-            </div>
-            <!-- 제목 -->
+            <div class="top-banner"></div>
             <h1>HTML Tutorial</h1>
-            <!-- 버튼 두 개 -->
             <div class="navi-button-container">
                 <div class="navi-button">Home</div>
                 <div class="navi-button">Next</div>
             </div>
-            <!-- 점보트론 -->
-            <!-- .jumbotron>h2>lorem2^p*3>lorem8 -->
             <div class="jumbotron">
                 <h2>Lorem, ipsum.</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                 <p>Corporis quaerat ea non ab iure officia molestias.</p>
                 <p>Quas deserunt ea maiores labore. Incidunt, ullam doloremque.</p>
             </div>
-
             <hr>
-            <!-- content -->
-            <!-- (h3>lorem2^p>lorem)*5 -->
+            <!-- Content 섹션 예시 -->
             <h3>Lorem, ipsum.</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium facere non, eligendi, tempora aut
                 neque dolorem dolorum consectetur ipsam vel praesentium laborum sint doloribus magni. Consequatur
@@ -271,8 +257,8 @@
             <p>Inventore consequatur, accusamus pariatur numquam quasi repudiandae, doloribus dolore magnam unde
                 temporibus optio eaque consectetur debitis beatae. Quam excepturi quaerat architecto ullam numquam
                 fugiat reiciendis. Libero aliquam totam voluptas sed.</p>
-
         </div>
+
         <div class="ad-container"></div>
     </div>
 </body>

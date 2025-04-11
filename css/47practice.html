@@ -9,7 +9,7 @@
     <style>
         html {background-color: darkgray; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;}
 
-        .menu {flex-direction: column;}
+        .menu {display: flex; flex-direction: column; height: 100vh;}
 
         .logo {
             display: flex;
@@ -53,9 +53,8 @@
         }
 
         .side-left{
-            flex-direction: column;
-            justify-content: left;
-            background-color: grey;
+            width: 100px;
+            background-color: black;
         }
     </style>
 
@@ -89,8 +88,9 @@
             <div class="side">Rerum.</div>
             <div class="side">Eligendi!</div>
         </div>
+        <div class="side-left"></div>
     </div>
-    <div class="side-left">d</div>
+    
 
 </body>
 
