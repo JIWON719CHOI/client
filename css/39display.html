@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div:nth-child(odd){
+            background-color: skyblue;
+        }
+        div{
+            width: 200px;
+            height: 100px;
+            padding: 10px;
+            margin: 10px;
+            /* 인라인의 특징은 필요한 만큼 쓴다. 그래서 뒤죽박죽 되는 것임 */
+            /* display : block or inline 결정 가능 */
+            display: inline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 요소의 크기와 패딩, 마진을 유지하고 가로 배치가 쉽지 않다. -->
+    <div id="box1">Lorem.</div>
+    <div id="box2">Asperiores.</div>
+    <div id="box3">Dicta?</div>
+
+    <hr>
+
+    <span id="line1">Lorem.</span>
+    <span id="line2">Tempora.</span>
+    <span id="line3">Ullam.</span>
+</body>
+
+</html>
