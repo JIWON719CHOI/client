@@ -7,17 +7,17 @@
     <title>Document</title>
 
     <style>
-        html {background-color: darkgray;}
+        html {background-color: darkgray; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;}
 
-        .menu {flex-direction: column;height: 100vh;}
+        .menu {flex-direction: column;}
 
         .logo {
             display: flex;
+            justify-content: center;
+            font-style: oblique;
             font-size: 90px;
             font-weight: 1000;
-            background-color: black;
-            color: white;
-            justify-content: center;
+            background-color: black; color: white;
         }
 
         .row-menu {
@@ -34,6 +34,29 @@
         .c:hover {background-color: darkgreen; color: white;}
         .d:hover {background-color: darkorange; color: white;}
         .e:hover {background-color: darkmagenta; color: white;}
+
+        .side-right{
+            flex-direction: column;
+            justify-content: right;
+        }
+
+        .side{
+            width: 200px;
+            height: 50px;
+            font-size: 25px;
+            font-weight: 500px;
+            background-color: rgb(54, 54, 54); color: rgb(146, 146, 146);
+        }
+
+        .side:hover{
+            background-color: black; color: white;
+        }
+
+        .side-left{
+            flex-direction: column;
+            justify-content: left;
+            background-color: grey;
+        }
     </style>
 
 </head>
@@ -41,15 +64,33 @@
 <body>
 
     <div class="menu">
-        <div class="logo">JIWON</div>
+        <div class="logo">Lorem.</div>
         <div class="row-menu">
-            <div class="a item">J</div>
-            <div class="b item">I</div>
-            <div class="c item">W</div>
-            <div class="d item">O</div>
-            <div class="e item">N</div>
+            <div class="a item">A</div>
+            <div class="b item">B</div>
+            <div class="c item">C</div>
+            <div class="d item">D</div>
+            <div class="e item">E</div>
+        </div>
+        <div class="side-right">
+            <div class="side">Lorem.</div>
+            <div class="side">Maiores!</div>
+            <div class="side">Tempore.</div>
+            <div class="side">Rerum.</div>
+            <div class="side">Eligendi!</div>
+            <div class="side">Quia.</div>
+            <div class="side">Est?</div>
+            <div class="side">Ratione.</div>
+            <div class="side">Numquam.</div>
+            <div class="side">Saepe!</div>
+            <div class="side">Lorem.</div>
+            <div class="side">Maiores!</div>
+            <div class="side">Tempore.</div>
+            <div class="side">Rerum.</div>
+            <div class="side">Eligendi!</div>
         </div>
     </div>
+    <div class="side-left">d</div>
 
 </body>
 
