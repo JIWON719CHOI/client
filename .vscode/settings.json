@@ -1,3 +1,4 @@
 {
-    "livePreview.defaultPreviewPath": "/css/52position.html"
+    "livePreview.defaultPreviewPath": "/css/52position.html",
+    "liveServer.settings.host": "192.168.0.4"
 }
