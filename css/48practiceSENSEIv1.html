@@ -12,12 +12,21 @@
     <style>
         /* 기본 배경 */
         html {
-            background-color: white; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            background-color: white;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         }
+
+        /* .fix {
+            position: sticky;
+            top: 0px;
+        } */
 
         /* 메뉴 관련 */
         .menu-container {
             display: flex;
+            position: sticky;
+            top: 10px;
+            background-color: white;
         }
 
         .logo {
@@ -30,6 +39,8 @@
         .nemo-button {
             padding: 17px;
             cursor: pointer;
+
+            /* 마우스를 올리면 손가락 모양으로 바뀌는*/
         }
 
         .nemo-button:hover {
@@ -64,10 +75,21 @@
             background-color: rgb(1, 78, 1);
         }
 
+        .move-right {
+            position: relative;
+            left: 30px;
+        }
+
+        .left-padding {
+            padding-left: 30px;
+        }
+
         /* 두번째 상단바 */
         .second-top-bar {
             display: flex;
             background-color: black;
+            position: sticky;
+            top: 63px;
         }
 
         .second-menu-item {
@@ -114,11 +136,6 @@
             height: 100vh;
         }
 
-        .side-menu {
-            width: 200px;
-            background-color: #ddd;
-        }
-
         .ad-container {
             width: 170px;
             background-color: greenyellow;
@@ -130,6 +147,11 @@
         }
 
         /* 사이드 메뉴 */
+        .side-menu {
+            width: 200px;
+            background-color: #ddd;
+        }
+
         .side-menu-header {
             font-size: 20px;
             padding-left: 16px;
@@ -167,10 +189,11 @@
                 Get Certified
             </span>
         </div>
-        <div class="circle-button">
+
+        <div class="circle-button move-right">
             <span>Sign Up</span>
         </div>
-        <div class="circle-button">
+        <div class="circle-button left-padding">
             <span>Log in</span>
         </div>
     </div>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div {
+            width: 200px;
+            height: 100px;
+        }
+
+        div:nth-child(odd) {
+            background-color: pink;
+        }
+
+        div:nth-child(even) {
+            background-color: skyblue;
+        }
+
+        #item2 {
+            /* 원래 위치에서 */
+            position: relative;
+
+            /* left, right, top, bottom
+                에서 얼마나 멀어지게? */
+            /* left: 10px; */
+            /* top: 10px; */
+            bottom: 10px;
+            /* right: 10px; */
+        }
+
+        #item4{
+            /* view port 기준으로 얼마나 멀어지느냐?*/
+            /* 복습: view port 는 내가 보고 있는 창. */
+            position: fixed; /*항상 창에 붙어 있어서 스크롤 내려도 같이 보임 */
+            right: 80px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <!-- #item$*3{$} -->
+    <div id="item1">1</div>
+    <div id="item2">2</div>
+    <div id="item3">3</div>
+
+    <hr>
+
+    <div id="item4">4</div>
+
+    <!-- br*100  새로운 줄을 100개 만들자 -->
+     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .sub-menu-container {
+            display: none;
+            position: absolute;
+            background-color: pink;
+            width: 200px;
+            height: 150px;
+            line-height: 50px;
+            
+        }
+
+        .drop-down:hover>.sub-menu-container {
+            display: block;
+        }
+        .drop-down{
+            background-color: skyblue;
+            width: 200px;
+            height: 50px;
+            line-height: 50px;
+            font-size: 25px;
+        }
+        .sub-menu-item:hover{
+            background-color: hotpink;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="drop-down">
+        <div>Hover Over Me!</div>
+        <div class="sub-menu-container">
+            <div class="sub-menu-item">Link1</div>
+            <div class="sub-menu-item">Link2</div>
+            <div class="sub-menu-item">Link3</div>
+        </div>
+    </div>
+
+
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum velit impedit quaerat laborum doloremque! Esse
+        perspiciatis totam voluptates molestiae reiciendis, eius debitis quaerat obcaecati, alias perferendis id maxime
+        necessitatibus non?</p>
+</body>
+
+</html>

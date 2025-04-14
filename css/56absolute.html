@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        h3 {
+            display: none;
+            position: absolute;
+            background-color: white;
+            top: 0px;
+            left: 150px;
+        }
+
+        /* h1을 호버하면 h3이 나타난다. 그래서 위에서 안밀리게 absolute 해줌 */
+        h1:hover+h3 {
+            display: block;
+        }
+        .container{
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- (.container>(h1>lorem1^h3>lorem1))*10 -->
+    <div class="container">
+        <h1>Lorem.</h1>
+        <h3>Lorem.</h3>
+    </div>
+    <div class="container">
+        <h1>Voluptatem!</h1>
+        <h3>Excepturi!</h3>
+    </div>
+    <div class="container">
+        <h1>Id?</h1>
+        <h3>Soluta.</h3>
+    </div>
+    <div class="container">
+        <h1>Sequi.</h1>
+        <h3>Harum.</h3>
+    </div>
+    <div class="container">
+        <h1>Dicta!</h1>
+        <h3>Dolor?</h3>
+    </div>
+    <div class="container">
+        <h1>Incidunt?</h1>
+        <h3>Facilis.</h3>
+    </div>
+    <div class="container">
+        <h1>Soluta!</h1>
+        <h3>Sunt?</h3>
+    </div>
+    <div class="container">
+        <h1>In!</h1>
+        <h3>Minus.</h3>
+    </div>
+    <div class="container">
+        <h1>Illum.</h1>
+        <h3>Repellendus?</h3>
+    </div>
+    <div class="container">
+        <h1>Aut.</h1>
+        <h3>Eveniet!</h3>
+    </div>
+</body>
+
+</html>
