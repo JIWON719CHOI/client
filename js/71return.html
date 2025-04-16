@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      function sum(i, j) {
+        let s = 0; // 누적할 합계를 저장할 변수
+        while (i <= j) {
+          // i부터 j까지 모두 포함
+          s += i; // 현재 i를 s에 누적
+          i++; // i를 1 증가
+        }
+        return s; // 반복 끝난 후 합계 반환
+      }
+
+      function sum(i, j) {
+        let s = 0;
+        for (let k = i; k <= j; k++) {
+          s += k;
+        }
+        return s;
+      }
+
+      let a = sum(1, 10);
+      let b = sum(5, 7);
+      let c = sum(4, 11);
+
+      console.log(a, b, c); //55 18 60
+
+      // 사용 예시, 주의 사항! i와 j가 정수여야 하고 i <= j 조건을 만족해야 한다.
+      //   i > j 인 경우는 sum(j, i)로 호출하거나 조건을 추가하여 처리해야함.
+      // 합계 = (j - i + 1) × (i + j) / 2            이건 산술공식... ㄱ-
+
+      function sum(i, j) {
+        return ((j - i + 1) * (i + j)) / 2;
+      }
+
+      console.log(sum(1, 10)); // 출력: 55
+      console.log(sum(5, 7)); // 출력: 18
+      console.log(sum(4, 11)); // 출력: 60
+
+      console.log(
+        `출력 SUM(1,10) = ${a}, 출력 SUM(5,7) = ${b}, 출력 SUM(4,11) = ${c}`
+      );
+
+      let d = sum(1, 10);
+      let e = sum(5, 7);
+      let f = sum(4, 11);
+      console.log(
+        `출력 SUM(1,10) = ${d}, 출력 SUM(5,7) = ${e}, 출력 SUM(4,11) = ${f}`
+      );
+    </script>
+  </body>
+</html>
