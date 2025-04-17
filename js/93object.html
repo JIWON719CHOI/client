@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      //number, string, function 모두 값이다...
+      let a = 3;
+      let b = "java";
+      let c = () => console.log("hi");
+
+      // object : 객체, 여러 값을 한꺼번에 가짐. 여기서 중괄호 {}는 코드블럭이 아니다.
+      let d = {}; // 값이 없는 객체(object)
+      let e = { name: "elon" }; // 값이 하나 있는 객체(object)
+      let f = { name: "trump", job: "president" }; // 값이 두개 있는 객체(object)
+      let g = { adress: "서울", age: 44 };
+      let h = { eamil: "gmail", height: 180, weight: 100 };
+
+      console.log(d);
+      console.log(e);
+      console.log(f);
+      console.log(g);
+      console.log(h);
+
+      // 객체의 각 property에 접근 하는 방법 // 객체가 갖고있는 각 값: property
+      console.log(e.name); // elon
+      console.log(e["name"]); //property 의 이름을 [] 대괄호에 넣어서 표현도 가능.
+      
+      console.log(f.name); // trump
+      console.log(f.job); // president
+
+      console.log(h.height);
+      console.log(h["height"]);
+      console.log(g.adress);
+      console.log(g["adress"]);
+      console.log(h.eamil);
+      console.log(h["eamil"]);
+
+      
+
+      
+
+      
+      
+    </script>
+  </body>
+</html>
