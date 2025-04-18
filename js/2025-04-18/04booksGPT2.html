@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BOOKS</title>
+  </head>
+  <body>
+    <script>
+      const books = Array.from(
+        { length: 3 },
+        (_, i) => (
+          (t = prompt(`책 ${i + 1} 제목`)),
+          (a = prompt(`책 ${i + 1} 저자`)),
+          (p = +prompt(`책 ${i + 1} 가격`)),
+          { title: t, author: a, price: p }
+        )
+      );
+
+      books.forEach((b) =>
+        console.log(
+          `제목: ${b.title}, 저자: ${
+            b.author
+          }, 가격: ${b.price.toLocaleString()}원`
+        )
+      );
+
+      const max = books.reduce((a, b) => (a.price > b.price ? a : b));
+      console.log(
+        `\n가장 비싼 책 -> 제목: ${max.title}, 저자: ${
+          max.author
+        }, 가격: ${max.price.toLocaleString()}원`
+      );
+    </script>
+  </body>
+</html>

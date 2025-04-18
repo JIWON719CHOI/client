@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>성적 처리 프로그램</title>
+  </head>
+  <body>
+    <h2>성적 처리 프로그램</h2>
+    <script>
+      // 학생 수를 3명으로 설정하고 각 학생의 정보를 담은 객체를
+      // 배열로 생성한다.
+      const students = Array.from({ length: 3 }, (_, i) => {
+        const name = prompt(`${i + 1}번째 학생 이름 입력`);
+
+        // 국,영,수 점수 입력 받아서 숫자 변환 후 배열에 저장
+        const scores = ["국어", "영어", "수학"].map((subject) =>
+          Number(prompt(`${name}의 ${subject} 점수 입력`))
+        );
+
+        // 총점 계산
+        const total = scores.reduce((a, b) => a + b);
+
+        // 평균 계산
+        const avg = total / scores.length;
+
+        // 학점 결정
+        const grade =
+          avg >= 90
+            ? "A"
+            : avg >= 80
+            ? "B"
+            : avg >= 70
+            ? "C"
+            : avg >= 60
+            ? "D"
+            : "F";
+
+        // 객체로 반환
+        return { name, scores, total, avg, grade };
+      });
+
+      // 출력
+      students.forEach(({ name, scores, total, avg, grade }) => {
+        document.write(
+          `<p>이름: ${name}<br>
+            국어: ${scores[0]}<br>
+            영어: ${scores[1]}<br>
+            수학: ${scores[2]}<br>
+            총점: ${total}<br>
+            평균: ${avg.toFixed(1)}<br>
+            학점: ${grade}</p>`
+        );
+      });
+    </script>
+  </body>
+</html>

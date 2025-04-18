@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>성적 처리</title>
+  </head>
+  <body>
+    <h2>성적 처리 프로그램</h2>
+    <script>
+      const name = prompt("이름 입력"),
+        subjects = ["국어", "영어", "수학"],
+        scores = subjects.map((s) => +prompt(`${s} 점수 입력`)),
+        total = scores.reduce((a, b) => a + b),
+        avg = total / scores.length,
+        grade =
+          avg >= 90
+            ? "A"
+            : avg >= 80
+            ? "B"
+            : avg >= 70
+            ? "C"
+            : avg >= 60
+            ? "D"
+            : "F";
+
+      document.write(`이름: ${name}<br>`);
+      subjects.forEach((s, i) => document.write(`${s}: ${scores[i]}<br>`));
+      document.write(
+        `총점: ${total}<br>평균: ${avg.toFixed(1)}<br>학점: ${grade}`
+      );
+    </script>
+  </body>
+</html>

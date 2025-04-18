@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>배열</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <h1>배열</h1>
+    <p>배열은 대괄호로 생성</p>
+    <p>배열의 인덱스는 0부터 시작</p>
+    <p>다양한 자료형(숫자, 문자열, 객체)을 배열로 선언 가능</p>
+    <p>push, pop, foreach, map, filter등의 메서드 제공</p>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      // 배열 생성 방법
+      // 리터럴 방식
+      let fruits = ["apple", "banana", "peach", "orange"];
+
+      // Array 생성자
+      let menus = new Array("김밥", "짜장면", "돈까스", "라면");
+
+      console.log("-------------------");
+
+      // 배열 접근 : 변수명[위치]
+      // 배열의 크기(갯수) : 변수명.length
+      console.log(menus[0]);
+      console.log(menus[1]);
+      console.log(menus[2]);
+      console.log(menus[3]);
+      console.log(menus.length);
+
+      console.log("-------------------");
+
+      // 배열 순회 : 전통적 방식
+      //   계속 위치, 숫자를 확인해야 하는...
+      for (let i = 0; i <= 3; ++i) {
+        console.log(menus[i]);
+      }
+
+      console.log("-------------------");
+
+      // 배열 순회 : 함수형 스타일, 선언형 방식. foreach (처리함수)
+      //   지향해야 하는 방식!!! , 함수에서 꺼내서 필요할 때만 계산함.
+      //   생략, 축약된. // 가장 많이 쓰는
+      fruits.forEach((fruit, idx) => {
+        // 위치값도 찍고 싶을 때. 순서 중요.
+        console.log(idx, fruit);
+      });
+
+      console.log("-------------------");
+
+      // 배열 순회: for..of
+      // 위치값 지정 없이 인덱스 인용 없이 바로 꺼내기.
+      for (let menu of menus) {
+        console.log(menu);
+      }
+
+      console.log("-------------------");
+
+      // 배열 순회: for..in
+      // for of 다음으로 쓰는 고급형?
+      for (let idx in fruits) {
+        console.log(fruits[idx]);
+      }
+    </script>
+
+    <script>
+      console.log("-------------------");
+
+      let games = [];
+
+      // 배열에 요소를 추가: push, 순서대로 뒤로 추가함.
+      games.push("디아블로");
+      games.push("오버워치");
+      games.push("롤");
+
+      for (let game of games) {
+        console.log(game);
+      }
+
+      console.log("-------------------");
+
+      // 배열에 요소를 제거: pop, 순서대로 뒤에서 부터 하나씩 사라짐
+      console.log(games.pop());
+      console.log(games.pop());
+      console.log(games.pop());
+    </script>
+  </body>
+</html>

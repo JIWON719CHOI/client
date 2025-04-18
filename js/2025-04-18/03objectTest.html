@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>성적 처리프로그램</h1>
+    <script>
+      //평균 점수로 학점 계산
+      const getGrade = (sj) => {
+        if (sj.avg >= 90) return "A";
+        else if (sj.avg >= 80) return "B";
+        else if (sj.avg >= 70) return "C";
+        else if (sj.avg >= 60) return "D";
+        else return "F";
+      };
+      // 입력 - 이름, 국어, 영어, 수학
+      let sungjuks = [];
+
+      for (let i = 0; i < 3; ++i) {
+        let sungjuk = new Object();
+
+        sungjuk.name = prompt("이름을 입력하세요");
+        sungjuk.kor = Number(prompt("국어를 입력하세요"));
+        sungjuk.eng = Number(prompt("영어를 입력하세요"));
+        sungjuk.math = Number(prompt("수학을 입력하세요"));
+      }
+
+      // 처리
+      sungjuk.tot = sungjuk.kor + sungjuk.eng + sungjuk.math;
+      sungjuk.avg = sungjuk.tot / 3;
+      sungjuk.grd = getGrade(sungjuk.avg);
+
+      // 처리 된 성적 데이터를 배열에 저장
+      sungjuks.push(sungjuk);
+
+      // 출력
+      for (let sj of sungjuks) {
+        result += `이름: ${sj.names[i]}, 
+        국어: ${sj.kors[i]}, 
+        영어: ${sj.engs[i]}, 
+        수학: ${sj.maths[i]}<br>`;
+        result += `총점 : ${sj.tots[i]}, 
+        평균 : ${sj.avgs[i].toFixed(1)}, 
+        학점 : ${sj.grds[i]} <p>`;
+      }
+
+
+      // 직렬화된 문자열을 LocalStorage에 저장
+      // LocalStorage.setItem(키, 값);
+      localStorage.setItem("sungjuks", sungjuks);
+    </script>
+    <p><a href="03obectTest2.html">성적데이터 조회</a></p>
+  </body>
+</html>
