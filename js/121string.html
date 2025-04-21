@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // substing(slice, substr) : 시작 위치(index)와 종료위치(index)로 부분 문자열 추출 후 리턴
+      let a = "javascript";
+      let b = a.substring(0, 4);
+      console.log(b); // java
+      console.log(a.substring(4, 7)); // scr
+
+      // 종료 위치 생략하면 끝까지
+      console.log(a.substring(4));
+      console.log(a.substring(4, 10)); // script
+
+      // 연습
+      console.log("------------------------------------");
+
+      let c = [
+        "java, spring, boot",
+        "pyton, django, ai",
+        "javascript, node, next",
+        "html, react, vue",
+        "jsp, servlet, thymeleaf",
+      ];
+
+      // 코드 작성
+      // 배열 c의 각 줄을 처리하면서 두 번째 단어만 출력
+      c.forEach((line) => {
+        // 1. 문자열을 쉼표(,) 기준으로 나눠 배열로 만듦
+        // 2. 나눈 배열에서 [1]번째 요소 (두 번째 단어)만 출력
+        console.log(line.split(",")[1].trim());
+      });
+
+      console.log("------------------------------------");
+
+      // 최적화 한줄 버전
+      c.forEach((l) => console.log(l.split(",")[1].trim()));
+
+      console.log("------------------------------------");
+
+      // 코드작성
+      let d = c.map((e) => {
+        // 첫번째 콤마위치
+        let firstComma = e.indexOf(",");
+        // 두번째 콤마위치
+        let secondComma = e.indexOf(",", firstComma + 1);
+
+        // 두 콤마사이의 문자열 추출
+        let secondWord = e.substring(firstComma + 1, secondComma);
+
+        // 리턴
+        return secondWord;
+      });
+      console.log(d); // ["spring", "django", "node", "react", "servlet"]
+    </script>
+  </body>
+</html>

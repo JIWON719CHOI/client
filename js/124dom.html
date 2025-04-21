@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- hq#head1+input#input1+button#btn{변경} -->
+    <hq id="head1">원래 텍스트</hq>
+    <input type="text" id="input1" />
+    <button id="btn1">변경</button>
+    <script>
+      document.querySelector("#btn1").onclick = () => {
+        let text = document.querySelector("#input1").value;
+        document.querySelector("#head1").innerHTML = text;
+      };
+    </script>
+  </body>
+</html>

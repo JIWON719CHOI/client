@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- id, class, tagname -->
+    <!-- (h1>lorem1^p>lorem3^h3>lorem2)*3 -->
+    <h1>Lorem.</h1>
+    <p>Lorem, ipsum dolor.</p>
+    <h3>Lorem, ipsum.</h3>
+    <h1>Accusantium.</h1>
+    <p>Tenetur, id voluptatibus.</p>
+    <h3>Dolorum, ab.</h3>
+    <h1>Autem!</h1>
+    <p>Ut, assumenda neque?</p>
+    <h3>Odio, distinctio.</h3>
+    <script>
+      // getElementsByTagName : tag명으로 요소들을 리턴
+      let a = document.getElementsByTagName("h1");
+      for (let i = 0; i < a.length; i++) {
+        console.log(a[i]);
+      }
+
+      // 연습 p 요소들을 선택해서 모두 탐색 출력
+      let b = document.getElementsByTagName("p");
+      for (let i = 0; i < a.length; i++) {
+        console.log(b[i]);
+      }
+      // 연습 h3 요소들을 모두 탐색 출력
+      let c = document.getElementsByTagName("h3");
+      for (let i = 0; i < a.length; i++) {
+        console.log(c[i]);
+      }
+    </script>
+  </body>
+</html>
