@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      // 객체는 property 와 method가 있다.
+      let a = {
+        address: "seoul", // property
+        email: "gmail", // property
+        display: function () {
+          //method
+          console.log("hello");
+        },
+        greeting: function () {
+          //method
+          console.log("안녕");
+        },
+      };
+      // 배열은 객체라서 property 가 있다.
+      let b = [22, 33, 44, 55, 66, 77];
+      console.log(b.length); // length property
+      b.sort(); // sort method
+      b.forEach(() => {}); // foreach method
+      b.fill(3); // fill method
+      b.filter(() => {}); // filter method
+      console.log("---------------------------------");
+
+      let c = [99, 11, 44, 88, 77, 55];
+      console.log(c); // 정렬 전
+      console.log("---------------------------------");
+
+      // sort
+      c.sort(); // 정렬
+      console.log(c); // 정렬 후
+
+      //
+      console.log("---------------------------------");
+      let e = [7, 2, 1, 3];
+      console.log(e);
+      console.log(e[3]);
+      e.sort();
+      console.log(e[3]);
+    </script>
+  </body>
+</html>
