@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Optimized TODO</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+  </head>
+  <body class="p-3">
+    <div class="container col-12 col-lg-6">
+      <h1 class="text-center mb-4">TODO LIST</h1>
+
+      <div class="input-group mb-3">
+        <input
+          id="input"
+          type="text"
+          class="form-control"
+          placeholder="할 일을 입력하세요"
+        />
+        <button id="add" class="btn btn-outline-secondary">
+          <i class="fa-solid fa-plus"></i>
+        </button>
+      </div>
+
+      <ul id="todos" class="list-group"></ul>
+    </div>
+
+    <script>
+      (() => {
+        const [inputEl, addBtn, listEl] = ["input", "add", "todos"].map((id) =>
+          document.getElementById(id)
+        );
+
+        // 항목 추가
+        addBtn.onclick = () => {
+          const text = inputEl.value.trim();
+          if (!text) return;
+
+          listEl.insertAdjacentHTML(
+            "beforeend",
+            `
+        <li class="list-group-item d-flex justify-content-between align-items-center"
+            data-state="active">
+          <span class="flex-grow-1 me-3">${text}</span>
+          <div class="btn-group btn-group-sm">
+            <button class="btn btn-outline-info toggle">
+              <i class="fa-solid fa-check"></i>
+            </button>
+            <button class="btn btn-outline-danger remove">
+              <i class="fa-regular fa-trash-can"></i>
+            </button>
+          </div>
+        </li>
+      `
+          );
+          inputEl.value = "";
+          inputEl.focus();
+        };
+
+        // 이벤트 위임: 완료 토글 & 삭제
+        listEl.onclick = (e) => {
+          const btn = e.target.closest("button");
+          if (!btn) return;
+          const li = btn.closest("li");
+
+          if (btn.classList.contains("remove")) {
+            li.remove();
+          } else if (btn.classList.contains("toggle")) {
+            const span = li.querySelector("span");
+            const done = span.classList.toggle("text-decoration-line-through");
+            btn.classList.toggle("btn-outline-info", !done);
+            btn.classList.toggle("btn-outline-secondary", done);
+            btn.innerHTML = done
+              ? '<i class="fa-solid fa-rotate-left"></i>'
+              : '<i class="fa-solid fa-check"></i>';
+          }
+        };
+      })();
+    </script>
+  </body>
+</html>
