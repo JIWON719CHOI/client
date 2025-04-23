@@ -18,18 +18,21 @@
     <ul id="list1"></ul>
 
     <script>
-      // 1) 핵심 요소들을 빠르게 가져오기
+      // 1) 핵심 요소들을 빠르게 가져오기 
+      //    getElementById: id로 요소를 빠르게 선택
+      //    배열과 map()을 쓰면 여러 id를 한 번에 간결하게 처리.
       const [inp, btn, list] = ["input1", "btn1", "list1"].map((id) =>
         document.getElementById(id)
-      ); // getElementById: id로 요소를 빠르게 선택
-         // 배열과 map()을 쓰면 여러 id를 한 번에 간결하게 처리.
+      );
 
-      // 2) '추가' 버튼 클릭 시
+      // 2) '추가' 버튼 클릭 시 .value로 입력값, 
+      //    .trim으로 앞뒤 공백 제거. 빈 문자열 무시
       btn.onclick = () => {
-        const v = inp.value.trim(); // .value로 입력값, .trim으로 앞뒤 공백 제거
-        if (!v) return; // 빈 문자열 무시
+        const v = inp.value.trim();
+        if (!v) return;
 
-        // 3) HTML 한 번에 삽입: <li> + 삭제·완료 버튼
+        // 3) HTML 한 번에 삽입: <li> + 삭제·완료 버튼. 
+        //    insertAdjacentHTML: 빠르고 안전하게 삽입
         list.insertAdjacentHTML(
           "beforeend",
           `
@@ -38,25 +41,28 @@
               <button class="del">삭제</button>
               <button class="tog">완료</button>
             </li>`
-        ); // insertAdjacentHTML: 빠르고 안전하게 삽입
+        );
 
-        inp.value = ""; // 입력란 초기화
+        inp.value = ""; // 입력란 초기화]       
       };
 
-      // 4) 이벤트 위임: 삭제·완료 토글은 리스트 하나의 리스너로 처리
+      // 4) 이벤트 위임: 삭제·완료 토글은 리스트 하나의 리스너로 처리 
+      //    .closest로 상위 <li> 찾기
       list.onclick = (e) => {
         const t = e.target,
-          li = t.closest("li"); // .closest로 상위 <li> 찾기
+          li = t.closest("li");
         if (!li) return;
 
         if (t.classList.contains("del")) {
-          // 삭제 버튼 클릭 시
-          li.remove(); // Element.remove(): 노드 즉시 제거
+          // 삭제 버튼  Element.remove(): 노드 즉시 제거
+          li.remove();
         } else if (t.classList.contains("tog")) {
-          // 완료/취소 버튼 클릭 시
-          const done = li.classList.toggle("done"); // classList.toggle: 클래스 추가/제거
-          t.textContent = done ? "취소" : "완료"; // classList.contains: 현재 상태 확인
+          // 완료/취소 버튼
+          const done = li.classList.toggle("done");
+          t.textContent = done ? "취소" : "완료";
         }
+        // classList.toggle: 클래스 추가/제거
+        // classList.contains: 현재 상태 확인
       };
     </script>
   </body>
